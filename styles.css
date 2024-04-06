@@ -11,17 +11,14 @@ body {
     color: #333;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-
-
 }
 
 header {
-    background-color:#70385f;
+    background-color: #70385f;
     color: #fff;
     padding: 20px 0;
 }
@@ -63,25 +60,27 @@ nav ul li a {
 .developer-info {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .developer-info img {
-    width: 275px; /* Tamanho da imagem */
-    height: 275px; /* Altura igual à largura para garantir um círculo perfeito */
-    margin-right: 20px; /* Espaçamento à direita da imagem */
+    width: 250px; /* Redimensionar a imagem para dispositivos menores */
+    height: 250px; /* Altura igual à largura para garantir um círculo perfeito */
+    margin-right: 0; /* Remover o espaçamento à direita da imagem */
+    margin-bottom: 20px;
     border-radius: 50%; /* Transformar a imagem em círculo */
     transition: transform 0.3s ease; /* Transição de transformação ao passar o mouse */
 }
 
 .developer-info img:hover {
-    transform: scale(1.05); /* Aumentar um pouco a escala ao passar o mouse */
+    transform: scale(1.1); /* Aumentar um pouco a escala ao passar o mouse */
 }
 
 .developer-info p {
-    font-size: 18px;
-    max-width: 400px; /* Largura máxima do parágrafo */
+    font-size: 16px;
+    max-width: 300px; /* Largura máxima do parágrafo para dispositivos menores */
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
 }
 
 .btn {
@@ -98,25 +97,6 @@ nav ul li a {
 .btn:hover {
     background-color: #0056b3;
 }
-#hero h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
 
 section {
     padding: 80px 0;
@@ -127,12 +107,12 @@ section h2 {
     margin-bottom: 40px;
     text-align: center;
 }
+
 /* Estilos para a seção Skills */
 #skills {
     padding: 80px 0;
     background-color: white; /* Cor de fundo da seção Skills */
     text-align: center; /* Centralizar o conteúdo */
-
 }
 
 .skills-list {
@@ -141,15 +121,11 @@ section h2 {
     justify-content: center;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px; /* Espaçamento entre as linhas de ícones */
-}
-
 .skill {
     width: 120px; /* Largura do bloco de habilidade */
     margin: 0 15px; /* Espaçamento entre os ícones */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    text-align: center;
 }
 
 .skill i {
@@ -173,12 +149,14 @@ section h2 {
 
 .project-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px; /* Espaçamento entre os projetos */
 }
 
 .project {
-    width: 600px;
+    width: 100%; /* Largura total em dispositivos menores */
+    max-width: 600px; /* Largura máxima do bloco de projeto */
     padding: 20px;
     background-color: #fff; /* Cor de fundo do bloco do projeto */
     border: 2px solid #70385f; /* Borda sólida azul */
@@ -195,7 +173,6 @@ section h2 {
 .project h3 {
     font-size: 24px;
     margin-bottom: 10px;
-
 }
 
 .project p {
@@ -219,7 +196,7 @@ section h2 {
 }
 
 footer {
-    background-color:#70385f;
+    background-color: #70385f;
     color: #fff;
     text-align: center;
     padding: 20px 0;
